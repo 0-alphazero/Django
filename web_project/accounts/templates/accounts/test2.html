@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SmartFuelFlow</title>
+    <!-- Add your CSS styles or include external CSS files here -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db; /* Admin blue background for header */
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #3498db; /* Admin blue background for navigation */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #2980b9; /* Darker admin blue background for buttons */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+        }
+
+        nav a:hover {
+            background-color: #154360; /* Darker blue background on hover */
+            color: white; /* White text color on hover */
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3498db; /* Admin blue background for footer */
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SmartFuelFlow - Admin Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#manageOrders">Manage Orders</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#userManagement">User Management</a>
+        <a href="#logout">Logout</a>
+        <!-- Add more navigation links for other features -->
+    </nav>
+
+    <!-- Table for Manage Orders -->
+    <section id="manageOrders">
+        <h2>Manage Orders</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order Number</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total Cost</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add dynamic content for managing orders -->
+                <tr>
+                    <td>1</td>
+                    <td>Petrol</td>
+                    <td>100 liters</td>
+                    <td>$150.00</td>
+                    <td>2023-01-01</td>
+                    <td>Delivered</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Table for Analytics -->
+    <section id="analytics">
+        <h2>Analytics</h2>
+        <!-- Add content for analytics -->
+    </section>
+
+    <!-- Table for User Management -->
+<!-- Table for User Management -->
+<section id="userManagement">
+    <h2>User Management</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User 1 -->
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>john.doe@example.com</td>
+                <td>Admin</td>
+            </tr>
+            <!-- User 2 -->
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>jane.smith@example.com</td>
+                <td>User</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</section>
+
+
+    <!-- Add more sections for other features -->
+
+    <footer>
+        <p>&copy; 2023 SmartFuelFlow</p>
+    </footer>
+</body>
+</html>
