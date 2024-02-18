@@ -1,6 +1,8 @@
+
 from multiprocessing import context
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
+from django.forms import inlineformset_factory
 from .models import *
 from .forms import OrderForm
 
@@ -33,8 +35,9 @@ def customer(request, pk):
     context = {'customer': customer, 'orders':orders, 'order_count': orders_count}
     return render(request, 'accounts/customer.html',context)
 
-def createOrder(request):
-    form = OrderForm()
+def createOrder(request,pk):
+    customer = Customer.objects.get(id = pk)
+    form = OrderForm(initial={'customer': customer})
     if request.method == 'POST':
         #print("printing POST:", request.POST)
         form = OrderForm(request.POST)
