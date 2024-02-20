@@ -1,10 +1,12 @@
 
+import imp
 from multiprocessing import context
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from .models import *
 from .forms import OrderForm
+from .filters import OrderFilter
 
 def home(request):
     orders =  Order.objects.all()
@@ -31,8 +33,11 @@ def customer(request, pk):
 
     orders = customer.order_set.all()
     orders_count = orders.count()
+    
+    myFilter = OrderFilter(request.GET, queryset = orders)
+    orders =  myFilter.qs
 
-    context = {'customer': customer, 'orders':orders, 'order_count': orders_count}
+    context = {'customer': customer, 'orders':orders, 'order_count': orders_count, 'myFilter': myFilter}
     return render(request, 'accounts/customer.html',context)
 
 def createOrder(request,pk):
