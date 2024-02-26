@@ -8,7 +8,7 @@ urlpatterns = [
     path('logout/', views.logoutPage, name='logout'),
 
     path('', views.home, name="home"),  # homepage view function
-
+    path('user/', views.userPage, name='user-page'),
     path('products/', views.products ,name='products'),
     path('customer/<str:pk>/', views.customer , name= 'customer'),
 
